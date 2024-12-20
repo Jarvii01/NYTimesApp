@@ -40,7 +40,7 @@ data class TopStoryItemDto(
 
     @SerializedName("multimedia")
     @Expose
-    val multimedia: List<TopStoriesItemMultimediaDto>,
+    val multimedia: List<TopStoriesMultimediaDto>,
 
     @SerializedName("orgFacet")
     @Expose

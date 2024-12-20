@@ -3,7 +3,7 @@ package com.example.nytimesapp.di.module
 import android.app.Application
 import com.example.nytimesapp.data.TopStoryRepository
 import com.example.nytimesapp.data.mapper.NewsMapper
-import com.example.nytimesapp.data.newsList.repository.RepositoryTopStoryDataSource
+import com.example.nytimesapp.data.newsList.dataSource.RepositoryTopStoryDataSource
 import com.example.nytimesapp.data.newsList.dataSource.TopStoryLocalDatasource
 import com.example.nytimesapp.data.newsList.dataSource.TopStoryRemoteDatasource
 import com.example.nytimesapp.data.newsList.retrofit.ApiFactory

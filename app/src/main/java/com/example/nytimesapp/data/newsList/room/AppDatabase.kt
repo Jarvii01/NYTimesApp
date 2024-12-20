@@ -4,15 +4,20 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.example.nytimesapp.data.newsList.room.dao.Converters
 import com.example.nytimesapp.data.newsList.room.dao.TopStoryDao
-import com.example.nytimesapp.data.newsList.room.dao.TopStoryEntity
+import com.example.nytimesapp.data.newsList.room.dao.entity.TopStoryEntity
 
 const val DB_NAME = "news.db"
 
-@Database(entities = [TopStoryEntity::class], version = 2, exportSchema = true)
+
+@Database(entities = [TopStoryEntity::class], version = 3, exportSchema = true)
+@TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     companion object {
 
+        @Volatile
         private var db: AppDatabase? = null
         private val LOCK = Any()
 

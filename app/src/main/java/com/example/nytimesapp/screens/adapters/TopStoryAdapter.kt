@@ -4,8 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.example.nytimesapp.R
-import com.example.nytimesapp.data.newsList.room.dao.TopStoryEntity
+import com.example.nytimesapp.data.newsList.room.dao.entity.TopStoryEntity
 import com.example.nytimesapp.databinding.NewsCardBinding
 
 class TopStoryAdapter : ListAdapter<TopStoryEntity, TopStoryViewHolder>(TopStoryDiffCallback) {
