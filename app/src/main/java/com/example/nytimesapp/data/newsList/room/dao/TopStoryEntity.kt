@@ -3,7 +3,8 @@ package com.example.nytimesapp.data.newsList.room.dao
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.nytimesapp.utils.Constants.TABLE_NAME
+
+private const val TABLE_NAME = "top_stories"
 
 @Entity(tableName = TABLE_NAME)
 data class TopStoryEntity(

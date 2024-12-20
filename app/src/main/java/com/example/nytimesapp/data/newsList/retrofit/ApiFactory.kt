@@ -1,10 +1,11 @@
 package com.example.nytimesapp.data.newsList.retrofit
 
-import com.example.nytimesapp.utils.Constants.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
+const val BASE_URL = "https://api.nytimes.com/svc/topstories/v2/"
 
 object ApiFactory {
 

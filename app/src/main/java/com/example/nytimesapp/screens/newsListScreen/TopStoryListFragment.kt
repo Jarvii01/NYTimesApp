@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.example.nytimesapp.NewsApp
 import com.example.nytimesapp.R
 import com.example.nytimesapp.databinding.FragmentTopStoryListBinding
+import com.example.nytimesapp.screens.adapters.TopStoryAdapter
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class TopStoryListFragment : Fragment(R.layout.fragment_top_story_list) {
@@ -29,8 +32,14 @@ class TopStoryListFragment : Fragment(R.layout.fragment_top_story_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         component.inject(this)
         super.onViewCreated(view, savedInstanceState)
-        viewModel.fetchNewsList()
-
+//        viewModel.loadData()
+        val topStoryAdapter = TopStoryAdapter()
+        binding.rvTopStoryList.adapter = topStoryAdapter
+        lifecycleScope.launch {
+            viewModel.getTopStoryList().collect() {
+                topStoryAdapter.submitList(it)
+            }
+        }
 
     }
 
