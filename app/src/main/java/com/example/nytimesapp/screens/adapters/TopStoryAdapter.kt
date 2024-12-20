@@ -22,6 +22,7 @@ class TopStoryAdapter : ListAdapter<TopStoryEntity, TopStoryViewHolder>(TopStory
     override fun onBindViewHolder(viewHolder: TopStoryViewHolder, position: Int) {
         val news = getItem(position)
         viewHolder.binding.rvTitle.text = news.title
+        viewHolder.binding.rvDesc.text = news.description
         Log.d("TopStoryAdapter", viewHolder.binding.rvTitle.toString())
 
     }
