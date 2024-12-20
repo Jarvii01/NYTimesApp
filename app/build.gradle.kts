@@ -85,6 +85,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
+    //Image Loading
+    implementation("com.squareup.picasso:picasso:2.8")
+
 //    //Serialization
 //    implementation(libs.kotlin.serialization)
 //    implementation(libs.kotlinx.serialization.json.jvm)

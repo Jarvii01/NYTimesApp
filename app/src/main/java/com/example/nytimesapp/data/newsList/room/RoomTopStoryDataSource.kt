@@ -1,13 +1,11 @@
 package com.example.nytimesapp.data.newsList.room
 
-import androidx.lifecycle.LiveData
 import com.example.nytimesapp.data.mapper.NewsMapper
 import com.example.nytimesapp.data.newsList.dataSource.TopStoryLocalDatasource
-import com.example.nytimesapp.data.newsList.model.TopStoryItemDto
 import com.example.nytimesapp.data.newsList.room.dao.TopStoryDao
-import com.example.nytimesapp.data.newsList.room.dao.TopStoryEntity
+import com.example.nytimesapp.data.newsList.room.dao.entity.TopStoryMultimediaEntity
+import com.example.nytimesapp.data.newsList.room.dao.entity.TopStoryEntity
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
 class RoomTopStoryDataSource @Inject constructor(

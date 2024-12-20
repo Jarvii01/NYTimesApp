@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.nytimesapp.NewsApp
-import com.example.nytimesapp.R
 import com.example.nytimesapp.databinding.ActivityMainBinding
 import com.example.nytimesapp.screens.adapters.TopStoryAdapter
 import com.example.nytimesapp.screens.newsListScreen.TopStoryViewModel
