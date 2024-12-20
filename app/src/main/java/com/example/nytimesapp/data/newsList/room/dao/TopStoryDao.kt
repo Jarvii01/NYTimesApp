@@ -4,13 +4,15 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.nytimesapp.utils.Constants.TABLE_NAME
+import kotlinx.coroutines.flow.Flow
+
+private const val TABLE_NAME = "top_stories"
 
 @Dao
 interface TopStoryDao {
 
     @Query("SELECT * FROM $TABLE_NAME")
-    suspend fun getNewsList(): List<TopStoryEntity>
+    fun getNewsList(): Flow<List<TopStoryEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addTopStories(list: List<TopStoryEntity>)

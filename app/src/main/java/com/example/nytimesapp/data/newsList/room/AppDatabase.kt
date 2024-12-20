@@ -6,9 +6,10 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.nytimesapp.data.newsList.room.dao.TopStoryDao
 import com.example.nytimesapp.data.newsList.room.dao.TopStoryEntity
-import com.example.nytimesapp.utils.Constants.DB_NAME
 
-@Database(entities = [TopStoryEntity::class], version = 1, exportSchema = true)
+const val DB_NAME = "news.db"
+
+@Database(entities = [TopStoryEntity::class], version = 2, exportSchema = true)
 abstract class AppDatabase : RoomDatabase() {
     companion object {
 
@@ -22,7 +23,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context,
                     AppDatabase::class.java,
                     DB_NAME
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
                 db = instance
 
                 return instance
