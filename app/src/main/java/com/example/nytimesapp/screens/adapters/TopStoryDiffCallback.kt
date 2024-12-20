@@ -1,7 +1,7 @@
 package com.example.nytimesapp.screens.adapters
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.nytimesapp.data.newsList.room.dao.TopStoryEntity
+import com.example.nytimesapp.data.newsList.room.dao.entity.TopStoryEntity
 
 object TopStoryDiffCallback : DiffUtil.ItemCallback<TopStoryEntity>() {
     override fun areItemsTheSame(oldItem: TopStoryEntity, newItem: TopStoryEntity): Boolean {

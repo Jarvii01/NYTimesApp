@@ -3,7 +3,7 @@ package com.example.nytimesapp.data.newsList.model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class TopStoriesItemMultimediaDto(
+data class TopStoriesMultimediaDto(
 
     @SerializedName("abstract")
     @Expose
