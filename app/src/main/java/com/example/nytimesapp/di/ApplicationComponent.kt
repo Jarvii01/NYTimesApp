@@ -17,9 +17,9 @@ interface ApplicationComponent {
 
     fun inject(activity: MainActivity)
 
-    fun inject(fragment: TopStoryListFragment)
-
     fun inject(application: NewsApp)
+
+    fun inject(fragment: TopStoryListFragment)
 
     @Component.Factory
     interface Factory {

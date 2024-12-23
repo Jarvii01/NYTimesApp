@@ -14,4 +14,11 @@ class Converters @Inject constructor() {
         return Gson().fromJson<List<TopStoriesMultimediaDto>>(multimedia, type)
 
     }
+
+    @TypeConverter
+    fun toJsonConverterMultimedia(multimedia: List<TopStoriesMultimediaDto>?): String? {
+        val type = object : TypeToken<List<TopStoriesMultimediaDto>>() {}.type
+        return Gson().toJson(multimedia, type)
+
+    }
 }

@@ -8,5 +8,7 @@ interface TopStoryLocalDatasource {
 
     fun getTopStoryList(): Flow<List<TopStoryEntity>>
 
+//    fun getTopStoryMultimedia(): Flow<List<TopStoryMultimediaEntity>>
+
 
 }

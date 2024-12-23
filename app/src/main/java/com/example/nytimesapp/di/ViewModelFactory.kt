@@ -1,4 +1,4 @@
-package com.example.nytimesapp.screens.newsListScreen
+package com.example.nytimesapp.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
