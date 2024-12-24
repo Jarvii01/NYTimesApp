@@ -1,6 +1,5 @@
 package com.example.nytimesapp.screens.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -29,7 +28,7 @@ class TopStoryAdapter @Inject constructor(
         val news = getItem(position)
         viewHolder.binding.rvTitle.text = news.title
         viewHolder.binding.rvDesc.text = news.description
-        Log.d("TopStoryAdapter", gson.toJson(news.multimedia))
+        viewHolder.binding.tvDate.text = news.publishedDate
         Picasso.get()
             .load("https://static01.nyt.com/images/2024/12/19/multimedia/19france-mayotte-promo/19france-mayotte-sub-01-bclt-superJumbo.jpg")
             .into(viewHolder.binding.ivNews)

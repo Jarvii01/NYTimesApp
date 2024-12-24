@@ -19,6 +19,7 @@ class NewsMapper @Inject constructor(
         description = dto.abstract,
         url = dto.url,
         uri = dto.uri,
+        publishedDate = dto.publishedDate,
         multimedia = converters.fromJsonConverterMultimedia(gson.toJson(dto.multimedia)).toString())
 
 }

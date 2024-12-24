@@ -12,7 +12,7 @@ import com.example.nytimesapp.data.newsList.room.dao.entity.TopStoryEntity
 const val DB_NAME = "news.db"
 
 
-@Database(entities = [TopStoryEntity::class], version = 6, exportSchema = true)
+@Database(entities = [TopStoryEntity::class], version = 7, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     companion object {
