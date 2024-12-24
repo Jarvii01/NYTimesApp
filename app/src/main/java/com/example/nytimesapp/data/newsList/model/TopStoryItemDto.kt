@@ -50,7 +50,7 @@ data class TopStoryItemDto(
     @Expose
     val perFacet: List<String>,
 
-    @SerializedName("publishedDate")
+    @SerializedName("published_date")
     @Expose
     val publishedDate: String,
 
