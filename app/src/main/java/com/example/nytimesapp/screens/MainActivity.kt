@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.nytimesapp.NewsApp
 import com.example.nytimesapp.R
 import com.example.nytimesapp.databinding.ActivityMainBinding
-import com.example.nytimesapp.screens.newsListScreen.TopStoryListFragment
+import com.example.nytimesapp.screens.topStoryListScreen.TopStoryListFragment
 
 class MainActivity : AppCompatActivity() {
 

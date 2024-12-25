@@ -28,7 +28,8 @@ class RepositoryTopStoryDataSource @Inject constructor(
     override fun getTopStoryList(): Flow<List<TopStoryEntity>> =
         topStoryLocalDatasource.getTopStoryList()
 
-//    override fun getTopStoryMultimedia(): Flow<List<TopStoryMultimediaEntity>> =
-//        topStoryLocalDatasource.getTopStoryMultimedia()
+    override fun getTopStoryItemByTitle(title: String): Flow<TopStoryEntity> =
+        topStoryLocalDatasource.getTopStoryItemByTitle(title)
+
 
 }

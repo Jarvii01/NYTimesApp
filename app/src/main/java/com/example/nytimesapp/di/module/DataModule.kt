@@ -40,11 +40,9 @@ interface DataModule {
         @ApplicationScope
         fun provideTopStoryLocalDataSource(
             application: Application,
-            mapper: NewsMapper
         ): TopStoryLocalDatasource =
             RoomTopStoryDataSource(
-                AppDatabase.getInstance(application).TopStoriesDao(),
-                mapper
+                AppDatabase.getInstance(application).TopStoriesDao()
             )
 
         @Provides

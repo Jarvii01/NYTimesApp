@@ -1,4 +1,4 @@
-package com.example.nytimesapp.screens.newsListScreen
+package com.example.nytimesapp.screens.topStoryListScreen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,7 +7,7 @@ import com.example.nytimesapp.data.newsList.room.dao.TopStoryDao
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class TopStoryViewModel @Inject constructor(
+class TopStoryListViewModel @Inject constructor(
     private val repository: TopStoryRepository,
     private val dao: TopStoryDao
 ) : ViewModel() {

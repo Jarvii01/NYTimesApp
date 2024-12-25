@@ -2,7 +2,8 @@ package com.example.nytimesapp.di.module
 
 import androidx.lifecycle.ViewModel
 import com.example.nytimesapp.di.annotation.ViewModelKey
-import com.example.nytimesapp.screens.newsListScreen.TopStoryViewModel
+import com.example.nytimesapp.screens.topStoryItem.TopStoryItemViewModel
+import com.example.nytimesapp.screens.topStoryListScreen.TopStoryListViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -12,7 +13,12 @@ interface ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(TopStoryViewModel::class)
-    fun bindNewsListViewModel(viewModel: TopStoryViewModel): ViewModel
+    @ViewModelKey(TopStoryListViewModel::class)
+    fun bindNewsListViewModel(viewModel: TopStoryListViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(TopStoryItemViewModel::class)
+    fun bindTopStoryItem(viewModel: TopStoryItemViewModel): ViewModel
 
 }

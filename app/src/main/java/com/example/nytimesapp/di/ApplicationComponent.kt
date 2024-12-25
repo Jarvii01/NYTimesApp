@@ -6,7 +6,8 @@ import com.example.nytimesapp.di.annotation.ApplicationScope
 import com.example.nytimesapp.di.module.DataModule
 import com.example.nytimesapp.di.module.ViewModelModule
 import com.example.nytimesapp.screens.MainActivity
-import com.example.nytimesapp.screens.newsListScreen.TopStoryListFragment
+import com.example.nytimesapp.screens.topStoryItem.TopStoryItemFragment
+import com.example.nytimesapp.screens.topStoryListScreen.TopStoryListFragment
 import com.google.gson.Gson
 import dagger.BindsInstance
 import dagger.Component
@@ -20,6 +21,8 @@ interface ApplicationComponent {
     fun inject(application: NewsApp)
 
     fun inject(fragment: TopStoryListFragment)
+
+    fun inject(fragment: TopStoryItemFragment)
 
     @Component.Factory
     interface Factory {

@@ -15,6 +15,8 @@ class TopStoryAdapter @Inject constructor(
     private val gson: Gson
 ) : ListAdapter<TopStoryEntity, TopStoryViewHolder>(TopStoryDiffCallback) {
 
+    var onTopStoryItemClickListener: OnTopStoryItemClickListener? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopStoryViewHolder {
         val binding = NewsCardBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -26,13 +28,23 @@ class TopStoryAdapter @Inject constructor(
 
     override fun onBindViewHolder(viewHolder: TopStoryViewHolder, position: Int) {
         val news = getItem(position)
-        viewHolder.binding.rvTitle.text = news.title
-        viewHolder.binding.rvDesc.text = news.description
-        viewHolder.binding.tvDate.text = news.publishedDate
-        Picasso.get()
-            .load("https://static01.nyt.com/images/2024/12/19/multimedia/19france-mayotte-promo/19france-mayotte-sub-01-bclt-superJumbo.jpg")
-            .into(viewHolder.binding.ivNews)
+        with(viewHolder.binding) {
+            rvTitle.text = news.title
+            rvDesc.text = news.description
+            tvDate.text = news.publishedDate
+            root.setOnClickListener {
+                onTopStoryItemClickListener?.onStoryClick(news)
+            }
+            Picasso.get()
+                .load("https://static01.nyt.com/images/2024/12/19/multimedia/19france-mayotte-promo/19france-mayotte-sub-01-bclt-superJumbo.jpg")
+                .into(viewHolder.binding.ivNews)
+        }
 
+
+    }
+
+    interface OnTopStoryItemClickListener {
+        fun onStoryClick(topStoryItem: TopStoryEntity)
     }
 
 }
